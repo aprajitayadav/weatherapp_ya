@@ -14,6 +14,7 @@
   },
   "homepage": "https://aprajitayadav.github.io/weather_app_deploy",
   "scripts": {
+    "deploy": "gh-pages -d components",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
