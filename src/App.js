@@ -47,7 +47,7 @@ class App extends React.Component {
         });
       } else {
         this.setState({
-          temperature: data.main.temp + " F",
+          temperature: data.main.temp + " Degree F",
           city: data.name,
           country: data.sys.country,
           humidity: data.main.humidity + "%",
