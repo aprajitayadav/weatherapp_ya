@@ -17,6 +17,7 @@ class App extends React.Component {
     humidity: undefined,
     description: undefined,
     time: undefined,
+    icon: undefined,
     error: undefined,
   };
   getWeather = async (e) => {
@@ -41,6 +42,7 @@ class App extends React.Component {
           humidity: undefined,
           description: undefined,
           time: undefined,
+          icon: undefined,
           error: "Please enter the correct zipcode!",
         });
       } else {
@@ -53,6 +55,10 @@ class App extends React.Component {
           time: Moment()
             .utcOffset(data.timezone / 60)
             .format("YYYY-MM-DD h:mm A"),
+          icon:
+            "http://openweathermap.org/img/wn/" +
+            data.weather[0].icon +
+            "@2x.png",
           error: "",
         });
       }
@@ -64,6 +70,7 @@ class App extends React.Component {
         humidity: undefined,
         description: undefined,
         time: undefined,
+        icon: undefined,
         error: "Please enter the values.",
       });
     }
@@ -87,6 +94,7 @@ class App extends React.Component {
                     country={this.state.country}
                     description={this.state.description}
                     time={this.state.time}
+                    icon={this.state.icon}
                     error={this.state.error}
                   />
                 </div>

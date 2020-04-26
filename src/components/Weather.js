@@ -30,7 +30,13 @@ const Weather = (props) => (
       <p className="weather__key">
         {" "}
         Conditions:
-        <span className="weather__value"> {props.description} </span>
+        <span className="weather__value"> {props.description}</span>
+        <img
+          className="weather__value"
+          src={props.icon}
+          height="50px"
+          align="center"
+        ></img>
       </p>
     )}
     {props.description && (
