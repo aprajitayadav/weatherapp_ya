@@ -56,9 +56,7 @@ class App extends React.Component {
             .utcOffset(data.timezone / 60)
             .format("YYYY-MM-DD h:mm A"),
           icon:
-            "https://openweathermap.org/img/wn/" +
-            data.weather[0].icon +
-            "@2x.png",
+            "https://openweathermap.org/img/w/" + data.weather[0].icon + ".png",
           error: "",
         });
       }
