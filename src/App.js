@@ -56,7 +56,7 @@ class App extends React.Component {
             .utcOffset(data.timezone / 60)
             .format("YYYY-MM-DD h:mm A"),
           icon:
-            "http://openweathermap.org/img/wn/" +
+            "https://openweathermap.org/img/wn/" +
             data.weather[0].icon +
             "@2x.png",
           error: "",
